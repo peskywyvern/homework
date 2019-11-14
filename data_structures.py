@@ -66,10 +66,9 @@ class DictStack:
     def is_full(self):
         return len(self.__items) == self.maxsize
 
-    def get(self, search_key, default=None):
-        for key, value in self.__items.items():
-            if key == search_key:
-                return value
+    def get(self, key, default=None):
+        if key in self.__items.keys():
+            return self.__items[key]
         return default
 
     def set_default(self, key, default=None):
