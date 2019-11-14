@@ -49,6 +49,15 @@ class DictStack:
         else:
             self.push(key, default)
 
+    def sum(self):
+        summ = 0
+        for n in self.__items.values():
+            try:
+                summ += n
+            except TypeError:
+                return 'List contains non-int object'
+        return summ
+
     @property
     def size(self):
         return len(self.__items)
