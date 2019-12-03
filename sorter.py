@@ -1,7 +1,7 @@
-import os
-import shutil
-import time
 import argparse
+import os
+import time
+import shutil
 from concurrent.futures import ThreadPoolExecutor
 
 
